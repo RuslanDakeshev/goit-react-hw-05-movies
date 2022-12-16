@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom"
+import { A } from "./Navigation.styled"
 
 export const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/events'>Events</NavLink></li>
+                <li><A to='/'>Home</A></li>
+                <li><A to='/events'>Events</A></li>
             </ul>
         </nav>
     )
