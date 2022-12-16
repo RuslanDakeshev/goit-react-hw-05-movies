@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RuslanDakeshev.github.io/goit-react-hw-04-images/",
+  "homepage": "https://RuslanDakeshev.github.io/goit-react-hw-05-movies/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -12,6 +12,7 @@
     "react-dom": "^18.1.0",
     "react-loader-spinner": "^5.3.4",
     "react-notifications": "^1.7.4",
+    "react-router-dom": "^6.5.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
     "styled-components": "^5.3.6",
