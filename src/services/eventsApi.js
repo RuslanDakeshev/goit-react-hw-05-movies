@@ -14,11 +14,11 @@ export async function fetchEvents() {
 }
 
 export async function fetchEventById(id) {
-  const response = await axios(`movies/${id}`, {
+  const {data} = await axios(`movie/${id}`, {
     params: {
       api_key: KEY,
       
     },
   });
-  return response.data
+  return data
 }

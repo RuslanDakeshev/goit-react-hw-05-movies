@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 export const EventsPage = () => {
-  const [events, setEvents] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetchEvents().then(setEvents);
+    fetchEvents().then(setMovies);
   }, []);
   return (
-    events && (
+    movies && (
       <>
         <ul>
-          {events.map(({ name, id }) => (
+          {movies.map(({ title, id }) => (
             <li key={id}>
-              <Link to={id}>{name}</Link>
+              <Link to={`${id}`}>{title}</Link>
             </li>
           ))}
         </ul>
