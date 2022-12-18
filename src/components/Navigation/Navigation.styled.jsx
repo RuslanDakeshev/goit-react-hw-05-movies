@@ -4,5 +4,9 @@ import styled from 'styled-components'
 export const A = styled(NavLink)`
 text-decoration: none;
 font-size: 18px;
-color:blue
+color:blue;
+
+&.active{
+    color: red
+}
 `
