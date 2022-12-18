@@ -24,9 +24,7 @@ export const useFetchEvent = () => {
         fetchEventById(movieId).then(setMovieDetails)
     }, [movieId]);
 
-     if (!movieDetails) {
-       return null;
-     }
+     return movieDetails
     
     
 
