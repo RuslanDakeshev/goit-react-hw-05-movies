@@ -22,3 +22,14 @@ export async function fetchEventById(id) {
   });
   return data
 }
+
+export async function fetchEventsByName(keyword,page) {
+  const response = await axios('search/movie', {
+    params: {
+      api_key: KEY,
+      page,
+      query:keyword,
+    },
+  });
+  return response.data.results;
+}

@@ -1,5 +1,5 @@
 import { useFetchEvent } from "hooks/useFetchEvent"
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 
 
@@ -9,15 +9,15 @@ export const EventSubPage = () => {
 
     
 
-    return <div>EVENT</div>
+    // return <div>EVENT</div>
 
-    // return (
+    return (
         
-    //     movie && (
-    //         <>
-    //             <h2>{movie.title}</h2>
-    //             <Link to='details'>More details</Link>
-    //         </>
-    //     )
-    // )
+        movie && (
+            <>
+                <h2>{movie.title}</h2>
+             <Link to='details'>More details</Link>
+             </>
+         )
+     )
 }

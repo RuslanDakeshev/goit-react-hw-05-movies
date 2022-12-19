@@ -1,15 +1,20 @@
 import { useFetchEvent } from "hooks/useFetchEvent"
 
 export const EventDetailsPage = () => {
-    const event = useFetchEvent()
+    const movie = useFetchEvent()
+
+    const genres = movie.genres
+    ? movie.genres.map(genre => genre.name).join(', ')
+    : 'unknown';
+    
 
     return (
         <>
-            {event && (
+            {movie && (
                 <>
-                <h2>{event.title}</h2>
-                <p>Main genre:{event.classifications[0].genre.name}</p>
-                    <p>Main subgenre:{event.classifications[0].subGenre.name}</p>
+                <h2>{movie.title}</h2>
+                <p>Main genre:{genres}</p>
+                    <p>Main subgenre:{movie.release_date}</p>
                     </>
             )}
         
