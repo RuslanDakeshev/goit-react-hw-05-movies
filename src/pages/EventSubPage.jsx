@@ -1,11 +1,13 @@
 import { useFetchEvent } from "hooks/useFetchEvent"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 
 
 export const EventSubPage = () => {
     const movie = useFetchEvent()
     console.log(movie);
+     const location = useLocation()
+    
 
     
 
@@ -16,7 +18,7 @@ export const EventSubPage = () => {
         movie && (
             <>
                 <h2>{movie.title}</h2>
-             <Link to='details'>More details</Link>
+             <Link to='cast' state={location.state}>More details</Link>
              </>
          )
      )
