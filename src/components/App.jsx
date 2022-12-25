@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { HomePage } from "pages/HomePage";
-import { EventsPage } from "pages/EventsPage";
-import { EventSubPage } from "pages/EventSubPage";
+// import { EventsPage } from "pages/EventsPage";
+// import { EventSubPage } from "pages/EventSubPage";
 import { EventDetailsPage } from "pages/EventDetailsPage";
 import { SearchEventsPage } from "pages/SearchEventsPage";
 
@@ -32,20 +32,24 @@ export const App = () => {
     <Routes>
       <Route path="/" element = {<Layout/>}>
         <Route index element={<HomePage />} />
-        <Route path="movies" element={<EventsPage />} >
-          <Route path=":movieId" element={<EventSubPage />} />
-          {/* <Route path='cast' element={<EventDetailsPage />} /> */}
+        <Route path="movies" element={<SearchEventsPage />} />
+          {/* <Route path=":movieId" element={<EventSubPage />} /> */}
+        <Route path='movies/:movieId' element={<EventDetailsPage />} >
+          <Route path='cast' element={<EventDetailsPage />} /> 
+          <Route path='reviews' element={<EventDetailsPage />} />
         </Route>
+          <Route path="*" element={<HomePage />} />
+       
+          {/* </Route> */}
+        
 
-        <Route path="search" element={<SearchEventsPage />} >
-        <Route path=":movieId" element={<EventSubPage/>}/>
-        </Route>
 
-        <Route path='movies/:movieId/cast' element={<EventDetailsPage />} />
-        <Route path='movies/:movieId/reviews' element={<EventDetailsPage />} />
-        <Route path='search/:movieId/details' element={<EventDetailsPage />} />
+        
 
         </Route>
       </Routes>
   )
 }
+
+//  <Route path="search" element={<SearchEventsPage />} >
+//           <Route path=":movieId" element={<EventSubPage />} />

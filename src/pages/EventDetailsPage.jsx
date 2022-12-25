@@ -8,7 +8,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 export const EventDetailsPage = () => {
     const movie = useFetchEvent()
     const navigate = useNavigate()
-     const location = useLocation()
+    const location = useLocation()
+    const getImgUrl = image => {
+    if (image === null) {
+      return 'https://img.icons8.com/pastel-glyph/512/film-reel--v2.png';
+    }
+    return `https://image.tmdb.org/t/p/w300${image}`;
+  };
     // console.log(location);
 
 //      const [credits, setCredits] = useState(null);
@@ -29,19 +35,19 @@ export const EventDetailsPage = () => {
 
     //     <>
     //         <button onClick={()=>{navigate(location?.state?.from ?? '/')}}>Go back</button>
-    //   {credits && (
-    //     <>
-    //       {credits.map(credit => {
+    //   {movies && (
+    //     <ul>
+    //       {movies.map(movie => {
     //         return (
     //           <li
-    //             key={credit.credit_id}
-    //             name={credit.name}
-    //             role={credit.character}
-    //             photo_path={credit.profile_path}
+    //             key={movie.credit_id}
+    //             name={movie.name}
+    //             role={movie.character}
+    //             photo_path={movie.profile_path}
     //           />
     //         );
     //       })}
-    //     </>
+    //     </ul>
     //   )}
     //   <p>Here will be additional info "Movie Cast"</p>
     // </>
@@ -51,7 +57,12 @@ export const EventDetailsPage = () => {
                 <>
                 <h2>{movie.title}</h2>
                 {/* <p>Main genre:{genres}</p> */}
-                    <p>Main subgenre:{movie.release_date}</p>
+                    <p>Main subgenre:{movie.genres.map(genre => genre.name).join(', ')}</p>
+                    <img src={getImgUrl(movie.poster_path)}
+                        alt={movie.title}
+                        width={350}
+                    />
+                    
                     </>
             )}
         
