@@ -12,3 +12,5 @@ export const Layout = () => {
         </Container>
     )
 }
+
+export default Layout;

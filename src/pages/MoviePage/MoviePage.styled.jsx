@@ -26,13 +26,16 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
+  margin: 20px 0;
   display: flex;
-  gap: 40px;
+  gap: 10px;
+  
 `;
 
 export const Img = styled.img`
   border-radius: 4px;
   box-shadow: var(--main-shadow);
+  
 `;
 
 export const Wrapper = styled.div``;

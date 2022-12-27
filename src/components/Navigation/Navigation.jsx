@@ -1,13 +1,19 @@
-import { A } from "./Navigation.styled"
+
+import { Nav,Header,HomeLink,List,Item } from "./Navigation.styled"
 
 export const Navigation = () => {
     return (
-        <nav>
-            <ul>
-                <li><A to='/' end>Home</A></li>
-                <li><A to='/movies'>Movies</A></li>
-                
-            </ul>
-        </nav>
+        <Header>
+            <Nav>
+                <List>
+                    <Item>
+                        <HomeLink to='/' end>Home</HomeLink>
+                    </Item>
+                    <Item>
+                <HomeLink to='/movies'>Movies</HomeLink>
+                </Item>
+                </List>
+                </Nav>
+        </Header>
     )
 } 

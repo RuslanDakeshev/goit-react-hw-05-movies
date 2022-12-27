@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fetchEventsByCredits } from 'services/eventsApi';
 import { useParams } from 'react-router-dom';
 import { ActorCard } from 'components/ActorCard/ActorCard';
+import { List } from './MovieCast.styled';
 
 export const MovieCast = () => {
   const [credits, setCredits] = useState(null);
@@ -22,7 +23,7 @@ export const MovieCast = () => {
         <p>Sorry, we don't have any cast on this movie</p>
       )}
       {credits && (
-        <ul>
+        <List>
           {credits.map(credit => {
             return (
               <ActorCard
@@ -33,8 +34,10 @@ export const MovieCast = () => {
               />
             );
           })}
-        </ul>
+        </List>
       )}
     </>
   );
 };
+
+export default MovieCast;

@@ -38,3 +38,5 @@ export const MovieReviews = () => {
     </List>
   );
 };
+
+export default MovieReviews;

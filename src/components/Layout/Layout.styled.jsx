@@ -11,16 +11,19 @@ export const Container = styled.div`
   max-width: 1200px;
 `;
 
-export const Nav = styled.nav`
-  margin-bottom: 20px;
-  padding: 30px 0;
-  max-width: 100%;
-`;
+// export const Nav = styled.nav`
+//   margin-bottom: 20px;
+//   padding: 30px 0;
+//   max-width: 100%;
+// `;
 
-export const NavList = styled.ul`
-  display: flex;
-  gap: 20px;
-`;
+// export const NavList = styled.ul`
+//   display: flex;
+//   gap: 20px;
+// `;
+
+
+
 
 // export const NavItemLink = styled(NavLink)`
 //   display: block;

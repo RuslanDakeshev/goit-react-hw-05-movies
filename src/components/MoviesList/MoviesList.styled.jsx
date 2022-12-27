@@ -7,20 +7,21 @@ export const MovieList = styled.ul`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  
 `;
 
 export const MovieItem = styled.li`
-  flex-basis: calc((100% - 100px) / 5);
-  max-height: 100%;
-  min-height: 390px;
-  border-radius: 8px;
-  overflow: hidden;
+  width: 210px;
+  background-color: #496785;
+  border-radius: 5px;
+  transition: 0.4s;
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
 `;
 
 export const MovieLink = styled(Link)`
   object-fit: cover;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,4 +46,5 @@ export const MovieName = styled.p`
   font-weight: 500;
   font-size: 18px;
   transition: all 200ms ease-in-out;
+  color: var(--secondary);
 `;

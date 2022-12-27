@@ -6,7 +6,8 @@ export const List = styled.ul`
   gap: 30px;
 `;
 
-export const Item = styled.li``;
+export const Item = styled.li`
+`;
 
 export const Author = styled.p`
   margin-bottom: 8px;

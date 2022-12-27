@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px 10px;
-  justify-content: center;
-`;
+
 
 export const Item = styled.li`
-  flex-basis: 150px;
+ width: 220px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  background-color: var(--bg);
+  box-shadow: var(--main-shadow);
+  
+  
 `;
 
 export const Img = styled.img`
+
   margin-bottom: 5px;
   border-radius: 4px;
 `;
@@ -23,5 +25,5 @@ export const Name = styled.p`
 `;
 
 export const Character = styled.p`
-  color: #6a9bd8;
+  color: var(--accent);
 `;
