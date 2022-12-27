@@ -43,16 +43,26 @@ export const HomeLink = styled(NavLink)`
     color: var(--bg);
     background-color: tomato;
     box-shadow: var(--main-shadow);
+        outline: 3px solid var(--bg);
+    box-shadow: 0px 0px 0px 6px var(--accent);
   }
   :hover:not(.active),
   :focus-visible:not(.active) {
-    color: tomato;
+ color: var(--bg);
     
+    box-shadow: var(--main-shadow);
+
+    box-shadow: 0px 0px 0px 6px var(--accent);
+   color: var(--accent);
+    background-color: var(--bg);
   }
   :focus {
     outline: 3px solid var(--bg);
     box-shadow: 0px 0px 0px 6px var(--accent);
   }
+    
+  
+  
 `;
 
 export const MoviesLink = styled(NavLink)`
