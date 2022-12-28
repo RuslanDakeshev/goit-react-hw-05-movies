@@ -38,6 +38,7 @@ export const HomeLink = styled(NavLink)`
   font-size: 22px;
   border-radius: 4px;
   transition: all 200ms ease-in-out;
+  color: var(--bg);
   background-color: var(--accent);
   &.active {
     color: var(--bg);

@@ -9,6 +9,7 @@ export const Item = styled.li`
   text-align: center;
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
+  margin-bottom:20px;
   
   
 `;

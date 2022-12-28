@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { fetchEvents } from 'services/eventsApi';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import { Text } from './HomePage.styled';
 
 export const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +12,7 @@ export const HomePage = () => {
   return (
     movies && (
       <>
-        <div>Popular Movies Today</div>
+        <Text>Popular Movies Today</Text>
         <MoviesList movies={movies} />
       </>
     )
