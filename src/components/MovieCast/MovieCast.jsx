@@ -8,6 +8,7 @@ export const MovieCast = () => {
   const [credits, setCredits] = useState(null);
   const { movieId } = useParams();
   // const imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+ const imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
 
   useEffect(() => {
     fetchEventsByCredits(movieId).then(setCredits);
@@ -16,6 +17,8 @@ export const MovieCast = () => {
   if (!credits) {
     return;
   }
+
+  
 
   return (
     <>
@@ -27,6 +30,7 @@ export const MovieCast = () => {
           {credits.map(credit => {
             return (
               <ActorCard
+                img src={imgBaseUrl.concat(credit.profile_path)} alt={credit.name} width="200"
                 key={credit.credit_id}
                 name={credit.name}
                 role={credit.character}

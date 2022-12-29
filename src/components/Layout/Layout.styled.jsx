@@ -3,12 +3,17 @@ import styled from 'styled-components'
 export const Header = styled.header`
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
+  width: 100%;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+`;
+
+export const Main = styled.div`
+ min-height: 100vh;
 `;
 
 // export const Nav = styled.nav`

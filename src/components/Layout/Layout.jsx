@@ -1,6 +1,6 @@
 import { Navigation } from "components/Navigation/Navigation";
 import { Outlet , useLocation} from "react-router-dom";
-import { Container, Header } from "./Layout.styled";
+import { Container, Header, Main } from "./Layout.styled";
 import { Footer } from "components/Footer/Footer";
 
 
@@ -9,7 +9,7 @@ export const Layout = () => {
     return (
         <Container>
             <Header>{!location.pathname.includes('details') && <Navigation />}</Header>
-            <main><Outlet /></main>
+            <Main><Outlet /></Main>
             <Footer>Footer</Footer>
             
         </Container>
