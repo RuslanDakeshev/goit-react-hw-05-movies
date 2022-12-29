@@ -15,8 +15,9 @@ export const Item = styled.li`
 `;
 
 export const Img = styled.img`
-
-  margin-bottom: 5px;
+margin-left:auto;
+margin-right:auto;
+  margin-bottom: 15px;
   border-radius: 4px;
 `;
 
